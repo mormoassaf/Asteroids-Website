@@ -44,14 +44,14 @@ const checkEmail = function (email) {
 }
 
 const createToken = function (userData) {
-    const token = jwt.sign(
-        {email: userData.email, userId: userData._id, permLevel: userData.permissionLevel},
-        process.env.JWT_KEY,
-        {
+    return jwt.sign({
+            email: userData.email,
+            userId: userData._id,
+            permissionLevel: userData.permissionLevel
+        },
+        process.env.JWT_KEY, {
             expiresIn: "1h"
-        }
-    );
-    return token;
+        });
 }
 
 exports.signup = function (req, res, next) {
@@ -60,11 +60,11 @@ exports.signup = function (req, res, next) {
             if (!b) {
                 createUser(req.data).then(newUser => {
                     newUser.save()
-                        .then(() => res.status(201).json({message: 'User has been registered!'}))
+                        .then(() => res.status(201).json({ message: 'User has been registered!' }))
                         .catch(e => next(e));
                 })
             } else {
-                res.status(409).json({message: "This email is already registered"});
+                res.status(409).json({ message: "This email is already registered" });
             }
         })
         .catch(e => next(e));

@@ -11,10 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdef35b8-8566-4cde-903e-065f423c05c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/article.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/article.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/articles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../turingly" beforeDir="false" afterPath="$PROJECT_DIR$/../turingly" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../turingly-backend" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +73,7 @@
       <workItem from="1605959768947" duration="751000" />
       <workItem from="1605960757365" duration="655000" />
       <workItem from="1606218774344" duration="8000" />
-      <workItem from="1606299372838" duration="4178000" />
+      <workItem from="1606299372838" duration="6982000" />
     </task>
     <servers />
   </component>
