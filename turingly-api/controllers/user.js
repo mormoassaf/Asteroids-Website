@@ -55,10 +55,10 @@ const createToken = function (userData) {
 }
 
 exports.signup = function (req, res, next) {
-    checkEmail(req.data.email)
+    checkEmail(req.body.email)
         .then(b => {
             if (!b) {
-                createUser(req.data).then(newUser => {
+                createUser(req.body).then(newUser => {
                     newUser.save()
                         .then(() => res.status(201).json({ message: 'User has been registered!' }))
                         .catch(e => next(e));
