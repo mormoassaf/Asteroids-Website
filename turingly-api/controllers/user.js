@@ -93,3 +93,13 @@ exports.login = function (req, res, next) {
         })
         .catch(err => next(err));
 }
+
+exports.getById = function (req, res, next) {
+    User.findById(req.params.userId)
+        .exec()
+        .then(result => {
+            if (result) res.status(200).json(res)
+            else res.status(404).json({message: 'user could not be found'});
+        })
+        .catch(e => next(e));
+}

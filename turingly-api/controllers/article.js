@@ -7,7 +7,8 @@ const createArticle = function(data) {
         author: data.author,
         title: data.title,
         description: data.description,
-        body: data.body,
+        blocks: data.blocks,
+        version: data.version
     });
 }
 
@@ -28,16 +29,18 @@ exports.getById = function (req, res, next) {
         .catch(e => next(e));
 }
 
-exports.createPost = function(req, res, next) {
+exports.create = function(req, res, next) {
     const article = createArticle(req.data);
-    article.save()
+    article
+        .save()
         .then(result => res.status(201).json({
             data: {
-                _id: result.id,
+                _id: result._id,
             },
             request: {
                 method: 'GET',
                 uri: ''
             }
         }))
+        .catch(e => next(e));
 }

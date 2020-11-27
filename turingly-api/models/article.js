@@ -6,10 +6,11 @@ const articleSchema = new Schema({
     author: { type: SchemaTypes.ObjectId, ref: 'User', required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
-    body: { type: String, required: true },
+    blocks: { type: Array, required: true },
     created: { type: Date, default: Date.now },
     comments: { type: Array, default: [] },
-    likes: { type: Number, default: 0 }
+    likes: { type: Number, default: 0 },
+    version: {type: String, required: true}
 });
 
 module.exports = mongoose.model('Article', articleSchema);
