@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const createArticle = function(data) {
     return new Article({
         _id: new mongoose.Types.ObjectId(),
-        author: data.author,
+        author: data.userData.userId,
         title: data.title,
         description: data.description,
         blocks: data.blocks,
@@ -30,7 +30,7 @@ exports.getById = function (req, res, next) {
 }
 
 exports.create = function(req, res, next) {
-    const article = createArticle(req.data);
+    const article = createArticle(req.body);
     article
         .save()
         .then(result => res.status(201).json({
