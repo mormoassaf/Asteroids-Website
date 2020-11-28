@@ -17,6 +17,7 @@ const createUser = function (data) {
                 // Create the user
                 resolve(new User({
                     _id: new mongoose.Types.ObjectId(),
+                    username: data.username,
                     email: data.email,
                     password: hash,
                     fname: data.fname,
