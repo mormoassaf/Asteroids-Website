@@ -25,7 +25,7 @@ exports.create = function (req, res, next) {
         name: req.body.name,
         desc: req.body.desc,
         img: {
-            data: fs.readFileSync(path.join(__dirname + '/../uploads/' + req.file.filename)),
+            data: fs.readFileSync('resources/static/assets/uploads/' + req.file.filename),
             contentType: 'image/png'
         }
     });

@@ -86,7 +86,13 @@ exports.login = function (req, res, next) {
                     // Send back the access token
                     return res.status(200).json({
                         message: "Login successful!",
-                        token: token
+                        token: token,
+                        data: {
+                            _id: users[0]._id,
+                            fname: users[0].fname,
+                            lname: users[0].lname,
+                            email: users[0].email
+                        }
                     });
                 }
                 res.status(401).json({ message: "Authorisation failed!" });
@@ -97,6 +103,7 @@ exports.login = function (req, res, next) {
 
 exports.getById = function (req, res, next) {
     User.findById(req.params.userId)
+        .select('_id fname lname email gender permissionLevel')
         .exec()
         .then(result => {
             if (result) res.status(200).json(result)

@@ -30,8 +30,8 @@ const userSchema  = new mongoose.Schema({
     birthday: { type: Date, required: true },
     gender: { type: String, required: true },
     permissionLevel: { type: Number, default: 0 },
-    isVerified: { type: Boolean, default: false},
-    verificationKey: { type: String, default: generateKey(10)}
+    isVerified: { type: Boolean, default: false },
+    verificationKey: { type: String, default: generateKey(10) }
 });
 
 module.exports = mongoose.model('User', userSchema);
