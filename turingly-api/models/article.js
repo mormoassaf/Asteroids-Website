@@ -9,8 +9,8 @@ const articleSchema = new Schema({
     description: { type: String, required: true },
     blocks: { type: Array, required: true },
     created: { type: Date, default: Date.now },
-    comments: { type: Array, default: [] },
-    likes: { type: Number, default: 0 },
+    comments: [{type: SchemaTypes.ObjectId, ref: "Comment"}],
+    likes: [{ type: SchemaTypes.ObjectId, ref: 'User', required: true }],
     version: {type: String, required: true}
 });
 
