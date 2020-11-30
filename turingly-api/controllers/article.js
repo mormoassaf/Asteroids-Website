@@ -1,14 +1,26 @@
 const Article = require('../models/article');
 const mongoose = require('mongoose');
 
+const generateKey = function (length) {
+    var result = '';
+    const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
+
 const createArticle = function(data) {
     return new Article({
-        _id: new mongoose.Types.ObjectId(),
+        _id: data.title.split(' ').join('-') + generateKey(),
         author: data.userData.userId,
         title: data.title,
         description: data.description,
         blocks: data.blocks,
-        version: data.version
+        version: data.version,
+        tags: data.tags
     });
 }
 

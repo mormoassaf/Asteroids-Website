@@ -11,9 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdef35b8-8566-4cde-903e-065f423c05c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/comment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../turingly" beforeDir="false" afterPath="$PROJECT_DIR$/../turingly" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/article.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/article.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../turingly-backend" beforeDir="false" />
     </list>
@@ -73,7 +73,7 @@
       <workItem from="1606299372838" duration="38493000" />
       <workItem from="1606575041459" duration="939000" />
       <workItem from="1606638735714" duration="6108000" />
-      <workItem from="1606663954468" duration="5085000" />
+      <workItem from="1606663954468" duration="8525000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,8 @@ const articleSchema = new Schema({
     created: { type: Date, default: Date.now },
     comments: [{type: SchemaTypes.ObjectId, ref: "Comment"}],
     likes: [{ type: SchemaTypes.ObjectId, ref: 'User', required: true }],
-    version: {type: String, required: true}
+    version: {type: String, required: true},
+    tags: [{ type: String, require: false}]
 });
 
 module.exports = mongoose.model('Article', articleSchema);
